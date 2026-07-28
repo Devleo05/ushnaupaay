@@ -52,7 +52,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/Saksham-Varshney07/Ushnaupaay.git
+git clone https://github.com/Devleo05/ushnaupaay.git
 ```
 
 Navigate to the project directory:
