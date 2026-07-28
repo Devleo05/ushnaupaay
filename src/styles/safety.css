@@ -1,0 +1,221 @@
+/* ===== NEOBRUTALIST SAFETY PAGE ===== */
+.safety-hero {
+  background: var(--coral);
+  padding: 80px 0 60px;
+  text-align: center;
+  border-bottom: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.safety-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent, transparent 16px,
+    rgba(0,0,0,0.06) 16px, rgba(0,0,0,0.06) 32px
+  );
+}
+
+.safety-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.safety-hero p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.75;
+  position: relative;
+}
+
+/* Safety Guidelines */
+.safety-guidelines { background: var(--white); border-bottom: var(--border); }
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 48px;
+}
+
+.safety-card {
+  background: var(--white);
+  border: var(--border);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.safety-card:nth-child(1) { background: var(--yellow); }
+.safety-card:nth-child(2) { background: var(--lime); }
+.safety-card:nth-child(3) { background: var(--sky); }
+.safety-card:nth-child(4) { background: var(--orange); }
+.safety-card:nth-child(5) { background: var(--purple); }
+.safety-card:nth-child(6) { background: var(--yellow); }
+
+.safety-card:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 var(--black);
+}
+
+.safety-card-icon {
+  font-size: 2.2rem;
+  width: 64px;
+  height: 64px;
+  background: var(--black);
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: transform 0.2s;
+}
+
+.safety-card:hover .safety-card-icon { transform: rotate(10deg) scale(1.1); }
+
+.safety-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.safety-card p {
+  font-size: 0.88rem;
+  color: var(--black);
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* Emergency Section */
+.emergency-section { background: var(--bg); border-bottom: var(--border); }
+
+.emergency-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 48px;
+}
+
+.emergency-step {
+  background: var(--white);
+  border: var(--border);
+  padding: 28px 18px;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.emergency-step:nth-child(1) { background: var(--coral); }
+.emergency-step:nth-child(2) { background: var(--orange); }
+.emergency-step:nth-child(3) { background: var(--yellow); }
+.emergency-step:nth-child(4) { background: var(--lime); }
+
+.emergency-step:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--black);
+}
+
+.emergency-step-num {
+  width: 38px;
+  height: 38px;
+  background: var(--black);
+  color: var(--white);
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin: 0 auto 16px;
+  font-family: var(--font-mono);
+}
+
+.emergency-step h4 {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.emergency-step p {
+  font-size: 0.83rem;
+  color: var(--black);
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.emergency-step-arrow {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--black);
+  display: none;
+  font-weight: 900;
+  z-index: 10;
+}
+
+.emergency-step:not(:last-child) .emergency-step-arrow { display: block; }
+
+/* Hotline */
+.hotline-section {
+  background: var(--black);
+  padding: 60px 0;
+  text-align: center;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.hotline-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--yellow);
+  text-transform: uppercase;
+}
+
+.hotline-section p {
+  font-size: 1rem;
+  color: rgba(250,250,250,0.75);
+  margin-bottom: 24px;
+}
+
+.hotline-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--coral);
+  letter-spacing: 4px;
+  font-family: var(--font-mono);
+  display: inline-block;
+  border: 3px solid var(--coral);
+  padding: 12px 32px;
+  box-shadow: 6px 6px 0 var(--coral);
+}
+
+@media (max-width: 1024px) {
+  .safety-grid { grid-template-columns: repeat(2, 1fr); }
+  .emergency-steps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .safety-hero h1 { font-size: 2rem; }
+  .safety-grid { grid-template-columns: 1fr; }
+  .emergency-steps { grid-template-columns: 1fr; }
+  .emergency-step-arrow { display: none !important; }
+  .hotline-number { font-size: 2rem; }
+}
