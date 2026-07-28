@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
             <FiGlobe className="navbar-logo-icon" />
-            Climate Intelligence - Saksham Varshney
+            Climate Intelligence
           </Link>
 
           <div className="navbar-links">
